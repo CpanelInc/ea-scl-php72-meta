@@ -11,10 +11,10 @@
 
 Summary:       Package that installs PHP 7.2
 Name:          %scl_name
-Version:       7.2.34
+Version:       7.2.35
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 3
+%define        release_prefix 1
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -179,6 +179,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 
 
 %changelog
+* Thu Oct 22 2026 Cory McIntire <cory.mcintire@webpros.com> - 7.2.35-1
+- EA-13619: Bump version to 7.2.35 for CVE-2026-109618 and CVE-2026-109619; no upstream 7.2.35 release exists
+
 * Wed May 10 2023 Brian Mendoza <brian.mendoza@cpanel.net> - 7.2.34-3
 - ZC-10936: Clean up Makefile and remove debug-package-nil
 
